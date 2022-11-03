@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>It's Time ! </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href= "logotm.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: 'Square Peg', cursive;
+	}
+    #intro {
+		min-height: 100vh;
+		background-color: #56c596;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.introtext {
+         display: flex;
+		 flex-direction: column;
+		 justify-content: center;
+		 align-items: center;
+	}
+	.C {
+		color: white;
+		font-size: 150px;
+		visibility: hidden;
+		animation: down 1s  1s  linear forwards;
+	}
+	.P{
+		font-size: 80px;
+		color: #205072;
+		visibility: hidden;
+		animation: up 1s  1s  linear forwards;
+	}
+	@keyframes up{
+		0%{
+			visibility: visible;
+			transform: translateY(50px);
+		}
+		100%{
+			visibility: visible;
+			transform: translateY(0px);
+		}
+	}
+	@keyframes down{
+		0%{
+			visibility: visible;
+			transform: translateY(-50px);
+		}
+		100%{
+			visibility: visible;
+			transform: translateY(0px);
+		}
+	}
+    .time {
+		width: 200px;
+		height: 200px;
+         margin: 0 auto;
+		 background-color: white;
+		 border-radius: 5% 5% 0 0;
+		 animation: up 1s 2s linear forwards;
+		 visibility: hidden;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+	#denous{
+		min-height: 300px;
+		width: 100%;
+		text-align: center;
+	}
+	#denous p{
+		margin: 20px auto;
+		width: 600px;
+		border: 3px dashed #31ddb2;
+		border-radius: 0 30px 0 30px;
+		height: 100%;
+		color: #31ddb2;
+	}
+	#nos-service{
+		width: 100%;
+		height: 400px;
+	}
+	#nos-service h1{
+		text-align: center;
+		color: #56c596;
+	}
+	.cards{
+		display: grid;
+		flex-wrap: flex;
+	}
+	.card{
+		background-image: linear-gradient(-45deg,#56c596, #205072);
+		margin: 5%;
+		width: 350px;
+		height: 175px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid white;
+		border-radius: 30px;
+	}
+	.card h5{
+		font-size: x-large;
+		color: white;
+	}
+	::-webkit-scrollbar {
+		width: 7px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #31ddb2;
+		border-radius: 15%;
+	}
+	::-webkit-scrollbar-track {
+		background-color: #94f3db;
+	}
+	@media only screen and (max-width : 500px){
+		#intro{
+			min-height: 99vh;
+		}
+		.P{
+			font-size: 40px;
+
+		}
+		.C{
+			font-size: 80px;
+		}
+		.introtext{
+			padding-top: 150px;
+			justify-content: center;
+			align-items: center;
+		}
+		#denous p{
+			width: 300px;
+		}
+	}
+</style>
+	<section id="intro">
+		<div class="introtext">
+		<h1 class="C">C'est le temps !</h1>
+		<h1 class="P"> Pour changer votre corps</h1>
+		</div>
+	
+			<img src="logotm.png" class="time">
+
+	</section>
+	<header >
+		<img src="logotm.png">
+		<nav>
+			<a href="#denous">A propos de nous</a>
+			<a href="nos-service">Nos service</a>
+			<a href="contact">contact</a>
+		</nav>
+	</header>
+     <div id="denous">
+	<h1 style="text-align: center; color: #56c596; font-size: 100px;;">A propos de nous </h1><br>
+     <p >C'est le temps ! Est une plateforme où le concept est de vous aider à obtenir votre physique de rêve sans avoir un coach, des suppléments ainsi que des restes </p>
+	 </div>
+	 <div id="nos-service">
+		<h1>Nos Services</h1>
+	<div class="cards">
+      <div class="card">
+		<h5>Déficit calorique</h5>
+	  </div>
+	  <div class="card"><h5>Pourcentage de graisse corporelle</h5></div>
+      <div class="card"><h5>IMC</h5></div>
+      <div class="card"><h5>Les macros</h5></div>
+   </div>
+	 </div>
+	 <div id="contact">
+      
+	 </div>
+    <script>
+		AOS.init();
+	  </script>
+</body>
+</html>
