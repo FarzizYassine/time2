@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>C'est le temps ! : Pour perdre ou gangner du poids </title>
+	<meta name="discription" content="comment perdre du poids comment gagner du poids ?">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href= "logotm.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: 'Square Peg', cursive;
+	}
+    #intro {
+		min-height: 100vh;
+		background-color: #56c596;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.introtext {
+         display: flex;
+		 flex-direction: column;
+		 justify-content: center;
+		 align-items: center;
+		 padding-bottom: 50px;
+	}
+	.contenu{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.C {
+		color: white;
+		font-size: 150px;
+		visibility: hidden;
+		animation: down 1s  1s  linear forwards;
+	}
+	.P{
+		font-size: 80px;
+		color: #205072;
+		visibility: hidden;
+		animation: up 1s  1s  linear forwards;
+	}
+	@keyframes up{
+		0%{
+			visibility: visible;
+			transform: translateY(50px);
+		}
+		100%{
+			visibility: visible;
+			transform: translateY(0px);
+		}
+	}
+	@keyframes down{
+		0%{
+			visibility: visible;
+			transform: translateY(-50px);
+		}
+		100%{
+			visibility: visible;
+			transform: translateY(0px);
+		}
+	}
+    .time {
+		width: 200px;
+		height: 200px;
+         margin: 0 auto;
+		 background-color: white;
+		 border-radius: 5% 5% 0 0;
+		 animation: up 1s 2s linear forwards;
+		 visibility: hidden;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+	#denous{
+		min-height: 100vh;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 50px;
+	}
+	.contenu-de-nous{
+		display: flex;
+		width: 100%;
+		border-bottom: 1px solid #31ddb2;
+		border-top: 1px solid #31ddb2;
+	}
+	.text{
+	width: 100%;
+	color: white;
+	 background-color: #31ddb2;
+	 border-radius: 25% 50% 25% 50%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 font-size: 50px;
+	 transition-delay: 1s;
+	 animation: border 1s linear forwards;
+	}
+	@keyframes border {
+      0%{
+		border-radius: 0;
+	  }
+	  100%{
+		border-radius: 25% 50% 25% 50%;
+	  }
+	}
+	@keyframes borderx {
+      0%{
+		border-radius: 25% 50% 25% 50%;
+	  }
+	  100%{
+		border-radius: 0;
+	  }
+	}
+	.text:hover{
+		animation: borderx 1s linear forwards;
+	}
+	
+	.logos {
+		width: 100%;
+		color: #31ddb2;
+		justify-content: space-around;
+		min-height: 70vh;
+	}
+	.logos i{
+		font-size: 50px;
+		margin: 30px;
+	}
+	#nos-service{
+		width: 100%;
+		height: 100%;
+        display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	#nos-service h1{
+		text-align: center;
+		color: #56c596;
+		font-size: 100px;
+		padding-top: 50px;
+	}
+	.cards{
+		width: 100%;
+		display: flex;
+        flex-flow: wrap;
+	}
+	.cards a{
+		text-decoration: none;
+		background-image: linear-gradient(-45deg,#56c596, #205072);
+		margin: 5%;
+		width: 350px;
+		height: 175px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid white;
+		border-radius: 30px;
+
+	}
+	.card h5{
+		font-size: x-large;
+		color: white;
+	}
+	.cards a:hover {
+		transform: scale(1.1);
+		transition-duration: 1s;
+		border: 1px solid #205072;
+		background-image: none;
+	}
+	.cards a:hover h5{
+		color: #205072;
+	}
+	#header {
+		height: 100%;
+		width: 100%;
+		background-color: #56c596;
+		color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	#head{
+		height: 50px;
+		width: 100%;
+		background-color: white;
+		border-bottom: 1px solid #56c596;
+		position: fixed;
+		z-index: 999;	
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		visibility: hidden;
+		animation: header 1s linear forwards;
+		
+	}
+	#header img{
+		width: 50px;
+		height: 50px;
+		display: none;
+	}
+	#header nav{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	#header nav a{
+		text-decoration: none;
+		color: white;
+		font-size: 25px;
+	}
+	#head img{
+		width: 50px;
+		height: 50px;
+	}
+	#head nav{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	#head nav a{
+		text-decoration: none;
+		color: #31ddb2;
+		font-size: 25px;
+	}
+	#contact{
+		height: 100px;
+		width: 100%;
+		background-color: #56c596;
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		align-items: center;
+		color: white;
+	}
+	#contacte{
+		text-decoration: none;
+		color: white;
+	}
+	#contact a{
+		text-decoration: none;
+		color: white;
+	}
+	#contact a:hover{
+		color: #205072;
+		transition-duration: 1s;
+	}
+	#pour-plus{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	::-webkit-scrollbar {
+		width: 7px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #31ddb2;
+		border-radius: 15%;
+	}
+	::-webkit-scrollbar-track {
+		background-color: #94f3db;
+	}
+	@keyframes header {
+		0%{
+			transform: translateY(-50px);
+			visibility: visible;
+		}
+		100%{
+			transform: translateY(0);
+			visibility: visible;
+		}
+	}
+	@media only screen and (max-width : 500px){
+		.P{
+			font-size: 40px;
+
+		}
+		.C{
+			font-size: 80px;
+		}
+		.introtext{
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 300px;
+		}
+		#denous p{
+			width: 300px;
+		}
+		.cards{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.logos{
+			display: none;
+		}
+
+	}
+</style>
+<body>
+	
+	<div id="intro">
+		<header id="header">	
+		<a href="#intro"><img src="logotm.png" id="image"></a>
+		<nav>
+			<a href="#denous">À propos de nous</a>
+			<a href="#nos-service">Nos service</a>
+			<a href="#pour-plus">Pour Plus</a>
+			<a href="" id="contacte">Contact</a>
+		</nav>
+	</header>
+	<div class="contenu">
+		
+		<div class="introtext">
+		<h1 class="C">C'est le temps !</h1>
+		<h1 class="P"> Pour changer votre corps</h1>
+		</div>
+	
+			<img src="logotm.png" class="time">
+        </div>
+	</div>
+	<div>
+	
+	</div>
+     <div id="denous">
+	<h1 style="text-align: center; color: #56c596; font-size: 100px; padding-bottom: 30px;">A propos de nous </h1>
+	<div class="contenu-de-nous">
+		<div class="text">
+     <p >tu n'es pas gros, tu n'es pas maigre tu es le meilleur c'est juste une question de temps et de connaissances. avec c'est le temps on t'aide à être dans ta meilleure version sans coach et sans truc secret tout est question de science . C'est le temps pour commencer ! </p>
+     </div>
+	 <div class="logos">
+		<i class="fa-solid fa-weight-hanging"></i>
+		<i class="fa-solid fa-dumbbell"></i>
+		<img src="logotm.png" style="margin: 30px; width: 55px; height: 55px;">
+		<i class="fa-solid fa-medal"></i>
+		<i class="fa-solid fa-dumbbell"></i>
+		<i class="fa-solid fa-medal"></i>
+		<i class="fa-solid fa-bicycle"></i>
+		<img src="logotm.png" style="margin: 30px; width: 55px; height: 55px;">
+		<i class="fa-solid fa-bicycle"></i>
+		<img src="logotm.png" style="margin: 30px; width: 55px; height: 55px;">
+		<i class="fa-solid fa-dumbbell"></i>
+		<i class="fa-solid fa-medal"></i>
+		<i class="fa-solid fa-bicycle"></i>
+		<i class="fa-solid fa-weight-hanging"></i>
+		<i class="fa-solid fa-dumbbell"></i>
+		<img src="logotm.png" style="margin: 30px; width: 55px; height: 55px;">
+	 </div>
+	 </div>
+	</div>
+	 <div id="nos-service">
+		<h1>Nos Services</h1>
+	<div class="cards">
+      <a href="file:///C:/Users/asus/Desktop/C'est%20le%20temps/dc.html"><div class="card">
+		<h5>Déficit calorique</h5>
+	  </div></a>
+	 <a href="file:///C:/Users/asus/Desktop/Body%20fat/bodyfat.html" ><div class="card"><h5>Pourcentage de graisse corporelle</h5></div></a>
+     <a href="file:///C:/Users/asus/Desktop/BMI/BMI.html"><div class="card"><h5>IMC</h5></div></a> 
+      <a href=""><div class="card"><h5>Les macros</h5></div></a> 
+   </div>
+    </div>
+	<br>
+	<div id="pour-plus">
+		<h1 style="text-align: center; color: #56c596; font-size: 100px; padding-bottom: 30px;">Pour plus</h1>
+	 <div id="contact">
+		<a href="https://www.instagram.com/cest.letemps/"><i class="fa-brands fa-instagram"></i></a>	
+		<a href=""><i class="fa-brands fa-facebook"></i></a>
+		<a href=""><i class="fa-sharp fa-solid fa-shop"></i></a>
+	</div>
+</div>
+    <script>
+		AOS.init();
+	  </script>
+	  <script>
+		let x=document.getElementById("denous");
+		 let y=document.getElementById("header");
+		let img=document.getElementById("image");
+		let contact=document.getElementById("contacte");
+
+		window.onscroll = function() {
+            if(window.scrollY >= x.offsetTop) {        
+                    y.setAttribute('id','head');
+					contacte.style.color='#205072';
+            }
+			else {y.setAttribute('id','header');
+			contacte.style.color='white';
+		}
+        };
+		
+	  </script>
+</body>
+</html>
